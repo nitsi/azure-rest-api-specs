@@ -168,7 +168,7 @@
               "compromisedEntity": "vm2"
             },
             "extendedProperties": {
-              "domainName": "vm2"
+              "Property1 2 3": "Property1 information"
             }
           }
         ]
