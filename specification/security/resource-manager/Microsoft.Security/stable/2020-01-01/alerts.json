@@ -572,9 +572,6 @@
   "definitions": {
     "Alert": {
       "type": "object",
-      "additionalProperties": {
-        "type": "string"
-      },
       "description": "Security alert",
       "properties": {
         "properties": {
