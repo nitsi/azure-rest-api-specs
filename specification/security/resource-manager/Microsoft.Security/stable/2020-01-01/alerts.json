@@ -607,13 +607,6 @@
       },
       "description": "Links related to the alert"
     },
-    "AlertExtendedProperties": {
-      "type": "object",
-      "description": "Custom properties for the alert.",
-      "additionalProperties": {
-        "type": "string"
-      }
-    },
     "AlertList": {
       "type": "object",
       "description": "List of security alerts",
@@ -898,7 +891,11 @@
           "description": "Key for corelating related alerts. Alerts with the same correlation key considered to be related."
         },
         "extendedProperties": {
-          "$ref": "#/definitions/AlertExtendedProperties"
+          "type": "object",
+          "description": "Custom properties for the alert.",
+          "additionalProperties": {
+            "type": "string"
+          }
         },
         "compromisedEntity": {
           "readOnly": true,
