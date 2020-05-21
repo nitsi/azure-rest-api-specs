@@ -165,18 +165,6 @@
               "isIncident": true,
               "correlationKey": "4hno6LF0xzCl5tqrk4nrBW+MY1BX816W6q6+0srk4",
               "compromisedEntity": "vm2"
-            },
-            "extendedProperties": {
-              "domain name": "vm2",
-              "user name": "vm2\\contosoUser",
-              "process name": "c:\\users\\contosoUser\\scrsave.scr",
-              "command line": "c:\\users\\contosoUser\\scrsave.scr",
-              "parent process": "cmd.exe",
-              "process id": "0x4aec",
-              "account logon id": "0x61450d87",
-              "user SID": "S-1-5-21-2144575486-8928446540-5163864319-500",
-              "parent process id": "0x3c44",
-              "resourceType": "Virtual Machine"
             }
           }
         ]
