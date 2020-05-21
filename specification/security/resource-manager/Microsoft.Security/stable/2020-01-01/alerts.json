@@ -893,9 +893,7 @@
         "extendedProperties": {
           "type": "object",
           "description": "Custom properties for the alert.",
-          "additionalProperties": {
-            "type": "string"
-          }
+          "additionalProperties": true
         },
         "compromisedEntity": {
           "readOnly": true,
