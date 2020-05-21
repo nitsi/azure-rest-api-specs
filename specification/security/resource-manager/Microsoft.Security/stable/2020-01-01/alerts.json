@@ -57,7 +57,7 @@
             "$ref": "#/parameters/ODataFilter"
           },
           {
-            "$ref": "#/parameters/ODataSelect"
+"$ref": "#/parameters/ODataSelect"
           },
           {
             "$ref": "#/parameters/ODataExpand"
@@ -609,10 +609,10 @@
     },
     "AlertExtendedProperties": {
       "type": "object",
+      "description": "Custom properties for the alert.",
       "additionalProperties": {
         "type": "string"
-      },
-      "description": "Custom properties for the alert."
+      }
     },
     "AlertList": {
       "type": "object",
@@ -898,8 +898,7 @@
           "description": "Key for corelating related alerts. Alerts with the same correlation key considered to be related."
         },
         "extendedProperties": {
-          "$ref": "#/definitions/AlertExtendedProperties",
-          "description": "Custom properties for the alert."
+          "$ref": "#/definitions/AlertExtendedProperties"
         },
         "compromisedEntity": {
           "readOnly": true,
