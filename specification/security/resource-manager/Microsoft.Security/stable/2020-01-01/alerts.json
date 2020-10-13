@@ -570,7 +570,7 @@
     },
     "AccountEntity": {
       "x-ms-discriminator-value": "account",
-      "description": "Represents an account. The account can be either domain account, local account or AAD account.",
+      "description": "Represents an account. The account can be either a domain account, a local account, or an AAD account.",
       "allOf": [
         {
           "$ref": "#/definitions/AlertEntity"
@@ -588,11 +588,11 @@
         },
         "dnsDomain": {
           "type": "string",
-          "description": "The fully qualified domain DNS name."
+          "description": "The fully qualified DNS name."
         },
         "upnSuffix": {
           "type": "string",
-          "description": "The user principal name suffix for the account, in some cases it is also the domain name."
+          "description": "The user principal name suffix for the account. In some cases it is also the domain name."
         },
         "sid": {
           "type": "string",
@@ -600,15 +600,15 @@
         },
         "aadTenantId": {
           "type": "string",
-          "description": "The Azure active directory tenant id."
+          "description": "The Azure Active Directory tenant ID."
         },
         "aadUserId": {
           "type": "string",
-          "description": "The Azure active directory user id."
+          "description": "The Azure Active Directory user ID."
         },
         "puid": {
           "type": "string",
-          "description": " The Azure active directory passport user id."
+          "description": " The Azure Active Directory passport user ID."
         },
         "displayName": {
           "type": "string",
@@ -620,7 +620,7 @@
         },
         "objectGuid": {
           "type": "string",
-          "description": "The objectGUID attribute is a single-value attribute that is the unique identifier for the object, assigned by active directory."
+          "description": "The objectGUID attribute is a single-value attribute that is the unique identifier for the object, assigned by Active Directory."
         },
         "host": {
           "$ref": "#/definitions/HostEntity"
@@ -673,7 +673,7 @@
     },
     "CloudApplicationEntity": { 
       "x-ms-discriminator-value": "cloud-application",
-      "description": "Represents a cloud application such as O365, salesforce etc.",
+      "description": "Represents a cloud application such as Microsoft 365, Salesforce etc.",
       "allOf": [
         {
           "$ref": "#/definitions/AlertEntity"
@@ -736,7 +736,7 @@
       "properties": {
         "fullPath": {
           "type": "string",
-          "description": "The file full path, combining both directory and name."
+          "description": "The file's full path, combining both directory and name."
         },
         "directory": {
           "type": "string",
@@ -744,7 +744,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The file name without path."
+          "description": "The file name without the path."
         },
         "host": {
           "$ref": "#/definitions/HostEntity"
@@ -790,15 +790,15 @@
       "properties": {
         "dnsDomain": {
           "type": "string",
-          "description": "The DNS domain that this computer belongs to."
+          "description": "The DNS domain to which this computer belongs."
         },
         "ntDomain": {
           "type": "string",
-          "description": "The NT domain that this computer belongs to."
+          "description": "The NT domain to which this computer belongs."
         },
         "hostName": {
           "type": "string",
-          "description": "The NT domain that this computer belongs to."
+          "description": "The NT domain to which this computer belongs."
         },
         "netBiosName": {
           "type": "string",
@@ -806,11 +806,11 @@
         },
         "azureID": {
           "type": "string",
-          "description": "The azure resource id of the VM, if known."
+          "description": "The Azure resource ID of the VM, if known."
         },
         "omsAgentID": {
           "type": "string",
-          "description": "The OMS agent id, if the computer has OMS agent installed."
+          "description": "The OMS agent ID, if the computer has OMS agent installed."
         },
         "osFamily": {
           "type": "string",
@@ -837,7 +837,7 @@
       "properties": {
         "sessionId": {
           "type": "string",
-          "description": "The session id for the account reported in the alert."
+          "description": "The session ID for the account reported in the alert."
         },
         "host": {
           "$ref": "#/definitions/HostEntity"
@@ -849,7 +849,7 @@
     },
     "IoTDeviceEntity": { 
       "x-ms-discriminator-value": "iotdevice",
-      "description": "Represents a IoT Device that is reported as part of the alert.",
+      "description": "Represents an IoT Device that is reported as part of the alert.",
       "allOf": [
         {
           "$ref": "#/definitions/AlertEntity"
@@ -859,7 +859,7 @@
       "properties": {
         "azureResource": {
           "type": "object",
-          "description": "ARM Id of for connected IoT Hub",
+          "description": "ARM ID of for connected IoT Hub",
           "properties": {
             "ResourceId": {
               "type": "string"
@@ -944,7 +944,7 @@
     },
     "MailboxEntity": { 
       "x-ms-discriminator-value": "mailbox",
-      "description": "Represents a mail box that is impacted",
+      "description": "Represents an impacted mailbox",
       "allOf": [
         {
           "$ref": "#/definitions/AlertEntity"
@@ -1126,7 +1126,7 @@
     },
     "SecurityGroupEntity": { 
       "x-ms-discriminator-value": "security-group",
-      "description": "Represents a securitygroup that is reported as part of the security detection alert. The security group in most cases would be a domain group, local group, AAD group or other",
+      "description": "Represents a security group that is reported as part of the security detection alert. The security group in most cases would be a domain group, local group, AAD group or other",
       "allOf": [
         {
           "$ref": "#/definitions/AlertEntity"
@@ -1144,7 +1144,7 @@
         },
         "objectGuid": {
           "type": "string",
-          "description": "The objectGUID attribute is a single-value attribute that is the unique identifier for the object, assigned by active directory"
+          "description": "The objectGUID attribute is a single-value attribute that is the unique identifier for the object, assigned by Active Directory"
         }
       }
     },
@@ -1273,7 +1273,7 @@
               },
               {
                 "value": "PreAttack",
-                "description": "PreAttack could be either an attempt to access a certain resource regardless of a malicious intent, or a failed attempt to gain access to a target system to gather information prior to exploitation. This step is usually detected as an attempt, originating from outside the network, to scan the target system and find a way in.  Further details on the PreAttack stage can be read in [MITRE Pre-Att&ck matrix](https://attack.mitre.org/matrices/pre/)."
+                "description": "PreAttack could be either an attempt to access a certain resource regardless of a malicious intent, or a failed attempt to gain access to a target system to gather information prior to exploitation. This step is usually detected as an attempt, originating from outside the network, to scan the target system and find a way in. Further details on the PreAttack stage can be read in [MITRE Pre-Att&ck matrix](https://attack.mitre.org/matrices/pre/)."
               },
               {
                 "value": "InitialAccess",
@@ -1358,7 +1358,7 @@
         "remediationSteps": {
           "readOnly": true,
           "type": "array",
-          "description": "Manual action items to take to remediate the alert.",
+          "description": "Manual actions to take to remediate the alert.",
           "items": {
             "readOnly": true,
             "type": "string"
@@ -1395,7 +1395,7 @@
               }
             ]
           },
-          "description": "The life cycle status of the alert."
+          "description": "The lifecycle status of the alert."
         },
         "extendedLinks": {
           "readOnly": true,
@@ -1408,7 +1408,7 @@
         "alertUri": {
           "readOnly": true,
           "type": "string",
-          "description": "A direct link to the alert page in Azure Portal."
+          "description": "A direct link to the alert page in the Azure portal."
         },
         "timeGeneratedUtc": {
           "readOnly": true,
@@ -1419,7 +1419,7 @@
         "productName": {
           "readOnly": true,
           "type": "string",
-          "description": "The name of the product which published this alert (Azure Security Center, Azure ATP, Microsoft Defender ATP, O365 ATP, MCAS, and so on)."
+          "description": "The name of the product which published this alert (Azure Security Center, Microsoft Defender for Identity, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, MCAS, and so on)."
         },
         "processingEndTimeUtc": {
           "readOnly": true,
@@ -1443,7 +1443,7 @@
         "correlationKey": {
           "readOnly": true,
           "type": "string",
-          "description": "Key for corelating related alerts. Alerts with the same correlation key considered to be related."
+          "description": "Key for correlating related alerts. Alerts with the same correlation key are considered as related."
         },
         "extendedProperties": {
           "$ref": "#/definitions/AlertExtendedProperties",
@@ -1486,23 +1486,23 @@
         "workspaceId": {
           "readOnly": true,
           "type": "string",
-          "description": "The LogAnalytics workspace id that stores this alert."
+          "description": "The Log Analytics workspace ID that stores this alert."
         },
         "workspaceSubscriptionId": {
           "readOnly": true,
           "type": "string",
-          "description": "The azure subscription id for the LogAnalytics workspace storing this alert.",
+          "description": "The Azure subscription ID for the Log Analytics workspace storing this alert.",
           "pattern": "^[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}$"
         },
         "workspaceResourceGroup": {
           "readOnly": true,
           "type": "string",
-          "description": "The azure resource group for the LogAnalytics workspace storing this alert"
+          "description": "The Azure resource group for the Log Analytics workspace storing this alert"
         },
         "agentId": {
           "readOnly": true,
           "type": "string",
-          "description": "(optional) The LogAnalytics agent id reporting the event that this alert is based on."
+          "description": "(optional) The Log Analytics agent ID reporting the event that this alert is based on."
         }
       }
     },
@@ -1516,7 +1516,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "description": "There can be multiple identifiers of different type per alert, this field specify the identifier type.",
+          "description": "There can be multiple identifiers of different type per alert, this field specifies the identifier type.",
           "enum": [
             "AzureResource",
             "LogAnalytics"
